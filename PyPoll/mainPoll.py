@@ -14,7 +14,7 @@ csvreader = csv.reader(csvfile, delimiter=',')
 
 for voter in csvreader:
     votersamount = votersamount + 1
-    candidatevotedfor = voter['Candidate']
+    candidatevotedfor = voter[2]
 
     try:
         candidates[candidatevotedfor] = candidates[candidatevotedfor] + 1
@@ -27,16 +27,22 @@ for c in candidates:
     percentage = (votesamount/votersamount) * 100
     candidatepercentages[c] = percentage
 
-    if numberofvotes > highestvotes:
-        highestvotes = numberofvotes
+    if votesamount > highestvotes:
+        highestvotes = votesamount
 
 for c in candidates:
     votesamount = candidates[c]
     if votesamount == highestvotes:
         winner = c
 
-
+print("Election Results")
+print("----------------")
+print("Total votes:")
 print(votersamount)
+print("----------------")
 print(candidates)
-
+print("----------------")
+print("Winner:")
+print(winner)
+print("----------------")
 csvfile.close()

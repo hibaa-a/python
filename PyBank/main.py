@@ -43,7 +43,7 @@ max_date = max(dates)
 min_change = min(profit_loss)
 min_date = min(dates)
 
-results =(f" Total Months: {total_months} \n Total Revenue: {netamount} \n Average Revenue Change: ({straight_average(total_change)}) \n Greatest Increase in Profits: {max(listminmax)[1]}: {max(listminmax)[0]} \n Greatest Decrease in Profits: {min(listminmax)[1]}: {min(listminmax)[0]}")
+results =(f" Total Months: {total_months} \n Total Revenue: ${netamount} \n Average Revenue Change: ${straight_average(total_change)} \n Greatest Increase in Profits: {max(listminmax)[1]}: {max(listminmax)[0]} \n Greatest Decrease in Profits: {min(listminmax)[1]}: {min(listminmax)[0]}")
 
 print("Financial Analysis")
 print("-----------------------")
