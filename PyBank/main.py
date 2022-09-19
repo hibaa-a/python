@@ -55,5 +55,17 @@ print(f'Average Change: ${averagechange}')
 print(f'Greatest Increase in Profits: {maxdate} (${max_val})')
 print(f'Greatest Decrease in Profits: {mindate} (${min_val})')
 
+    #writing the results
+f = open(r"C:\Users\haldu\python-challenge\PyBank\analysis\budget_data_analysis.txt", 'w')
+
+f.write('Financial Analysis\n')
+f.write('----------------------------\n')
+f.write(f'Total Months: {total_months}\n')
+f.write(f'Total: ${total}\n')
+f.write(f'Average Change: ${averagechange}\n')
+f.write(f'Greatest Increase in Profits: {maxdate} (${max_val})\n')
+f.write(f'Greatest Decrease in Profits: {mindate} (${min_val})\n')
+f.close()
+
 
 csvfile.close()
