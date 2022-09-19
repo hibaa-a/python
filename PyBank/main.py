@@ -14,7 +14,7 @@ old = 0
 profit_loss = []
 dates = []
 
-    # reading the data and spliiting by commas
+    # reading the data and splitting by commas
 csvfile = open(budget_data, 'r')
 csvreader = csv.reader(csvfile, delimiter=',')
 
@@ -23,7 +23,7 @@ header = next(csvreader)
 
 for row in csvreader:
     dates.append(row[0])
-    profit_loss.append((int(row[1])) - old)
+    profit_loss.append((int(row[1]))- old)
 
     total_months = total_months + 1
     total = total + int(row[1])
@@ -32,8 +32,8 @@ for row in csvreader:
 del profit_loss[0]
 
     #finding the average change
-total = sum(profit_loss)
-averagechange = round((total / (total_months - 1)), 2)
+profitlosstotal = sum(profit_loss)
+averagechange = round((profitlosstotal / (total_months - 1)), 2)
 
     #finding the min/max profit change
 max_val = max(profit_loss)
